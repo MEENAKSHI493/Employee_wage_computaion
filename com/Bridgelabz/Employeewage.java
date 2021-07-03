@@ -4,25 +4,35 @@ public class Employeewage {
 
 
 	public static void main(String[] args) {
-		System.out.println("wellcome to bridgelabz");
-		int empCheck = (int) Math.floor(Math.random() * 10) % 2;
-		if (empCheck == 1) {
-			System.out.println("Employee is Present");
-		} else {
-			System.out.println("Employee is Absent");	
+		int PartTimeHours = 4;
 		int FullDay = 8;
 		int WageParHour = 20;
-		int empPresent = 1;		
-		if (empCheck == empPresent) {
-			int dailyWage = FullDay*WageParHour;
+		final int empPresent = 1;
+		final int empPartTime = 2;
+		int dailyWage = 0;
+
+		int empCheck = (int)Math.floor(Math.random() * 10) % 3;
+		
+		switch (empCheck) {
+		case empPresent:
+			dailyWage = FullDay*WageParHour;
 			System.out.println("Employee is Present");
 			System.out.println("Employee Daily Wage Is : "+ dailyWage);
-		}else {
-		System.out.println("Employee is Absent");
+			break;
+		case empPartTime:{
+			dailyWage = PartTimeHours*WageParHour;
+			System.out.println("Employee Part Time is Present");
+			System.out.println("Employee Part Time Wage Is : "+ dailyWage);
+			break;
 		}
-		
+		default:
+			System.out.println("Employee is Absent");
+			break;
+		}
 	}
 
 	}
-}
+    
+	
+
 
