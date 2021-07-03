@@ -4,6 +4,7 @@ public class Employeewage {
 
 
 	public static void main(String[] args) {
+
 		int FullDayHr=8;
 		int PartTimeHr=4;
 		int WagePerHr=20;
@@ -37,9 +38,10 @@ public class Employeewage {
 		System.out.println(empHr);
 		System.out.println(day);
 	}
-
+	
+	
 }
-    
+
 	
 
 
