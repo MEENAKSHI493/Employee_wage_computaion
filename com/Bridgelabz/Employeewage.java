@@ -19,7 +19,8 @@ public class Employeewage {
 			System.out.println("Employee Daily Wage Is : "+ dailyWage);
 		}else {
 		System.out.println("Employee is Absent");
-		}	
+		}
+		
 	}
 
 	}
