@@ -1,46 +1,35 @@
 package com.Bridgelabz;
 
 public class Employeewage {
-
-	public static void calculateWages() 
-	{
-		int FullDayHr=8;
-		int PartTimeHr=4;
-		int WagePerHr=20;
-		int day=0;
-		int empHr=0;
-		int wage = 0;
-		while (day <= 19) {
-			int n = (int) (Math.random() * 10) % 3;
-		switch (n) {
-		case 1:
-			System.out.println("present fullday");
-			wage = (wage + (WagePerHr * FullDayHr));
-            empHr=(empHr+ FullDayHr);
-			day++;
-			break;
-		case 2:
-			System.out.println("present PartTime");
-			wage = (wage + (WagePerHr * PartTimeHr));
-			empHr=(empHr+ PartTimeHr);
-			day++;
-			break;
-		default:
-			System.out.println("absent");
-		    day++;
-			if( empHr == 100)
+		public static void main(String[] args) 
+		{
+			int PartTimeHours = 4;
+			int FullDay = 8;
+			int WageParHour = 20;
+			final int empPresent = 1;
+			final int empPartTime = 2;
+			int dailyWage = 0;
+			int empCheck = (int)Math.floor(Math.random() * 10) % 3;
+			switch (empCheck) 
+			{
+			case empPresent:
+				dailyWage = FullDay*WageParHour;
+				System.out.println("Employee is Present");
+				System.out.println("Employee Daily Wage Is : "+ dailyWage);
 				break;
-		}
-		 }
-		System.out.println("total wage of a month is");
-		System.out.println(wage);
-		System.out.println(empHr);
-		System.out.println(day);
-	}
-	
-	public static void main(String[] args) 
-	{
-		calculateWages();
+			case empPartTime:
+			{
+				dailyWage = PartTimeHours*WageParHour;
+				System.out.println("Employee Part Time is Present");
+				System.out.println("Employee Part Time Wage Is : "+ dailyWage);
+				break;
+			}
+			default:
+				System.out.println("Employee is Absent");
+				break;
+			}
+		
+
 	}
 
 }
