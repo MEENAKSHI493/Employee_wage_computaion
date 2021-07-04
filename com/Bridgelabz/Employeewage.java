@@ -2,7 +2,7 @@ package com.Bridgelabz;
 
 public class Employeewage {
 
-	public static void main(String[] args) {
+	public static void calculateWages() {
 		int FullDayHr = 8;
 		int PartTimeHr = 4;
 		int WagePerHr = 20;
@@ -35,6 +35,10 @@ public class Employeewage {
 		System.out.println(wage);
 		System.out.println(empHr);
 		System.out.println(day);
-
 	}
+
+	public static void main(String[] args) {
+		calculateWages();
+	}
+
 }
